@@ -14,7 +14,7 @@ datasets you can use to get the information needed to answer that question.
 
 ## What my project is about
 I decided for this project, I wanted to see how much area each country has.
-I.e, I wanted to show the are of all the countries in the world.
+I.e, I wanted to show the area of all the countries in the world.
 
 ## Pip install instructions
 In order to install all of the files necessary for the program,
