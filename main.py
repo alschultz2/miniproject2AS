@@ -9,6 +9,7 @@
 # Imported the necessary packages
 import pandas as pd
 import matplotlib.pyplot as plt
+from pathlib import Path
 
 # (20/20 points) Using a data source of your choice, such as data from data.gov or using the Faker package, generate or retrieve some data for creating basic statistics on. This will generally come in as json data, etc. #Done
         # Think of some question you would like to solve such as:
@@ -27,6 +28,12 @@ print(MainData)
 AverageArea = data['land_area'].mean()
 print(AverageArea)
 
+try:
+    #Create the charts folder
+    Path('charts').mkdir()
+except FileExistsError:
+    pass
+
 # (10/10 points) Using matplotlib, graph this data in a way that will visually represent the data. Really try to build some fancy charts here as it will greatly help you in future homework assignments and in the final project.
 
 # Plot the land area for the first 10
@@ -37,17 +44,23 @@ plt.xlabel('country')
 plt.ylabel('Land Area')
 # Rotate the names so they can be read
 plt.xticks(rotation=45)
+# Save the plot
+savefile = "charts/" + "Land Area.png"
+plt.savefig(savefile)
 # Actually show the graph
 plt.show()
+
+
 
 plt.bar(MainData['country'], MainData['agricultural_land'])
 plt.title('Agricultural land Area for first 10 Countries')
 plt.xlabel('country')
 plt.ylabel('Agricultural Land Area')
 plt.xticks(rotation=45)
+savefile = "charts/" + "Agricultural Land Area.png"
+plt.savefig(savefile)
 # Actually show the graph
 plt.show()
-
 
 # (10/10 points) Save these graphs in a folder called charts as PNG files. Do not upload these to your project folder, the project should save these when it executes. You may want to add this folder to your .gitignore file.
 
