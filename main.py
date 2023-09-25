@@ -6,6 +6,7 @@
 
 # (5/5 points) Proper import of packages used. #Done
 
+# Imported the necessary packages
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -16,20 +17,27 @@ import matplotlib.pyplot as plt
         # Here are some other great datasets: https://www.kaggle.com/datasets
 # (10/10 points) Store this information in Pandas dataframe. These should be 2D data as a dataframe, meaning the data is labeled tabular data. #Done
 
-
+#Get the data in from the csv file
 data = pd.read_csv('All Countries.csv')
+# Get a small sample of the data so it will fit nicer on a plot
 MainData = data.head(10)
+# Print out the data points so the user can see them easier
 print(MainData)
+# calculate out the average land area for refrence
 AverageArea = data['land_area'].mean()
 print(AverageArea)
 
 # (10/10 points) Using matplotlib, graph this data in a way that will visually represent the data. Really try to build some fancy charts here as it will greatly help you in future homework assignments and in the final project.
 
+# Plot the land area for the first 10
 plt.bar(MainData['country'], MainData['land_area'])
 plt.title('Land Area for first 10 Countries')
+# Set up the x and y axis
 plt.xlabel('country')
 plt.ylabel('Land Area')
+# Rotate the names so they can be read
 plt.xticks(rotation=45)
+# Actually show the graph
 plt.show()
 
 plt.bar(MainData['country'], MainData['agricultural_land'])
@@ -37,6 +45,7 @@ plt.title('Agricultural land Area for first 10 Countries')
 plt.xlabel('country')
 plt.ylabel('Agricultural Land Area')
 plt.xticks(rotation=45)
+# Actually show the graph
 plt.show()
 
 

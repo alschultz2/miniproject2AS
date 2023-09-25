@@ -16,6 +16,9 @@ datasets you can use to get the information needed to answer that question.
 I decided for this project, I wanted to see how much area each country has.
 I.e, I wanted to show the area of all the countries in the world.
 
+There will be a couple graphs to show what some countries total land area are, 
+and what their usable agricultural land is. 
+
 ## Pip install instructions
 In order to install all of the files necessary for the program,
 please run the following:
